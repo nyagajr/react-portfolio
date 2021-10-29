@@ -3,6 +3,8 @@ import './navbar.scss'
 import {ContactPhone, Mail} from '@material-ui/icons'
 
 
+
+
 export default function Navbar({humOpen,setHumOpen}) {
     return (
         <div className={'navbar ' + (humOpen && 'active')}>
@@ -17,6 +19,7 @@ export default function Navbar({humOpen,setHumOpen}) {
                     <div className="itemContainer">
                         <Mail className='icon'/>
                         <span>nyagaben123@gmail.com</span>
+
                     </div>
                         
                     </div>
