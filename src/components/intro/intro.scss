@@ -1,19 +1,21 @@
+@import '../../global.scss';
+
+
 .intro{
     background-color: #ffff;
     display: flex;
 
     .left{
+        // background-color: rgb(238, 238, 238);
         flex: 0.5;
         overflow:hidden ;
         
 
         .dPic{
-            margin-left: 50px;
+            margin-left: 80px;
             margin-top: 30px;
-            width: 400px;
-            height: 400px;
-            background-color: rgb(158, 240, 243);
-            border-radius: 50%;
+            width: 600px;
+            height: 400px;        
             display: flex;
             align-items: center;
             justify-content: center;
@@ -26,6 +28,7 @@
     }
 
     .right{
+        // background-color: rgb(236, 233, 233);
         flex: 0.5;
         position: relative;
 
@@ -41,13 +44,43 @@
             h1{
                 font-size: 60px;
                 margin: 10px 0;
+                color:rgb(19, 101, 112);
             }
             h2{
                 font-size: 30px;
+                color:rgb(19, 101, 112);
             }
             h3{
                 font-size: 35px;
+                margin-left: 90px;
+                color:rgb(19, 101, 112);
             }
+
+            h4{
+                margin-left: 0px;
+                font-size: 30px;
+                margin-top: 10px;
+                color: rgb(22, 127, 141);
+
+                span{
+                    color: rgb(22, 127, 141);
+                }
+
+                .ityped-cursor{
+                    animation: blinker 1s infinite;
+                }
+
+                @keyframes blinker {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                    
+                }
+            }
+            
         }
 
         a{
@@ -56,8 +89,9 @@
             
             .icon{
                 font-size: 40px;
-                margin-left: 200px;
+                margin-left: 300px;
                 animation: timer 2s infinite;
+                color:rgb(19, 101, 112);
             }
 
             @keyframes timer {
