@@ -49,13 +49,14 @@ export default function Works() {
       ];
 
       const clickSlider = (side) => {
-          side === 'left'      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+          side === "left"      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
           : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
       };
+
     return (
         <div className='works' id='works'>
             <div className="slider" style={{transform:`translateX(-${currentSlide * 100}vw)`}}>
-                {data.map(d=>(<div className="container">
+                {data.map(d =>(<div className="container">
                     <div className="item">
                         <div className="left">
                             <div className="leftContainer">
