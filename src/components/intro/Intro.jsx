@@ -4,6 +4,7 @@ import {ArrowDownwardTwoTone as ArrowDownwardTwoToneIcon} from '@material-ui/ico
 import { init } from 'ityped'
 import { useEffect, useRef } from'react'
 
+
 export default function Intro() {
     const headerTxt = useRef()
     useEffect(() => {
@@ -41,7 +42,7 @@ export default function Intro() {
                 </div>
 
                 <a href="#portfolio">
-                    <ArrowDownwardTwoToneIcon className='icon'/>
+                   
                 </a>
             </div>
         </div>
