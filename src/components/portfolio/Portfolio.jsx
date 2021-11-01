@@ -1,9 +1,11 @@
-import React, {useState} from 'react'
+import React, {useEffect,useState} from 'react'
 import './portfolio.scss'
 import PortfolioList from '../portolioList/PortfolioList'
+import {featuredPortfolio,webPortfolio,frontEndPortfolio,backEndPortfolio} from '../../data'
 
 export default function Portfolio() {
     const [selected, setSelected] = useState('featured')
+    const [data, setData] = useState([])
 
     const list = [
         {
@@ -23,11 +25,33 @@ export default function Portfolio() {
 
         {
             id: 'back-end',
-            title:'BAck-end App',
+            title:'Back-end App',
         },
 
         
     ]
+
+    useEffect(()=>{
+
+        switch(selected){
+            case 'featured':
+                setData(featuredPortfolio);
+                break;
+                case 'web':
+                    setData(webPortfolio);
+                    break;
+                case 'front-end':
+                    setData(frontEndPortfolio);
+                    break;
+                case 'back-end':
+                    setData(backEndPortfolio);
+                    break; 
+                default:
+                    setData(featuredPortfolio)
+
+        }
+
+    },[selected])
     return (
         <div className='portfolio' id='portfolio'>
             <h1>Portfolio</h1>
@@ -41,35 +65,16 @@ export default function Portfolio() {
             </ul>
 
            <div className="container">
-               <div className="item">
-               <img src={process.env.PUBLIC_URL + '/assets/png-clipart-security-hacker-computer-security-certified-ethical-hacker-white-hat-hacker-tshirt-computer-network-thumbnail.png'} />
-                   <h3>Dev Enthausiast Website</h3>
-               </div>
+               {data.map(item=>(
 
+               
                <div className="item">
-               <img src={process.env.PUBLIC_URL + '/assets/png-clipart-security-hacker-computer-security-certified-ethical-hacker-white-hat-hacker-tshirt-computer-network-thumbnail.png'} />
-                   <h3>Dev Enthausiast Website</h3>
+               <img src={item.img} />
+                   <h3>{item.title}</h3>
                </div>
+               ))}
 
-               <div className="item">
-               <img src={process.env.PUBLIC_URL + '/assets/png-clipart-security-hacker-computer-security-certified-ethical-hacker-white-hat-hacker-tshirt-computer-network-thumbnail.png'} />
-                   <h3>Dev Enthausiast Website</h3>
-               </div>
-
-               <div className="item">
-               <img src={process.env.PUBLIC_URL + '/assets/png-clipart-security-hacker-computer-security-certified-ethical-hacker-white-hat-hacker-tshirt-computer-network-thumbnail.png'} />
-                   <h3>Dev Enthausiast Website</h3>
-               </div>
-
-               <div className="item">
-               <img src={process.env.PUBLIC_URL + '/assets/png-clipart-security-hacker-computer-security-certified-ethical-hacker-white-hat-hacker-tshirt-computer-network-thumbnail.png'} />
-                   <h3>Dev Enthausiast Website</h3>
-               </div>
-
-               <div className="item">
-               <img src={process.env.PUBLIC_URL + '/assets/png-clipart-security-hacker-computer-security-certified-ethical-hacker-white-hat-hacker-tshirt-computer-network-thumbnail.png'} />
-                   <h3>Dev Enthausiast Website</h3>
-               </div>
+               
            </div>
         </div>
     )
