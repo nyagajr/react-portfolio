@@ -1,6 +1,8 @@
 import React from 'react'
 import './works.scss'
 
+
+
 export default function Works() {
     return (
         <div className='works' id='works'>
@@ -17,7 +19,9 @@ export default function Works() {
                                 <span>Projects</span>
                             </div>
                         </div>
-                        <div className="right"></div>
+                        <div className="right">
+                            <img src={process.env.PUBLIC_URL + '/assets/curves.png'} alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
