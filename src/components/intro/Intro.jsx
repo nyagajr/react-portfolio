@@ -42,7 +42,7 @@ export default function Intro() {
                 </div>
 
                 <a href="#portfolio">
-                   
+                <ArrowDownwardTwoToneIcon className='icon' />
                 </a>
             </div>
         </div>
