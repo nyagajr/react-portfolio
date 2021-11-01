@@ -2,9 +2,6 @@ import React from 'react'
 import './navbar.scss'
 import {ContactPhone, Mail} from '@material-ui/icons'
 
-
-
-
 export default function Navbar({humOpen,setHumOpen}) {
     return (
         <div className={'navbar ' + (humOpen && 'active')}>
