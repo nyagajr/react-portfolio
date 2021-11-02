@@ -1,1 +1,9 @@
-$globalColor: rgb(19, 101, 112);;
+$globalColor: rgb(19, 101, 112);
+
+$width: 768px;
+
+@mixin mobile{
+    @media(max-width: #{$width}){
+        @content
+    }
+}

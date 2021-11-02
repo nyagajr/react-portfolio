@@ -5,6 +5,11 @@
     background-color: #ffff;
     display: flex;
 
+    @include mobile{
+        align-items: center;
+        flex-direction: column;
+    }
+
     .left{
         // background-color: rgb(238, 238, 238);
         flex: 0.5;
@@ -17,11 +22,19 @@
             width: 600px;
             height: 400px;        
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
 
+            @include mobile{
+                align-items: flex-start;
+            }
+
             img{
-                height:90% ;
+                height: 90%;
+
+                @include mobile{
+                    height: 50%;
+                }
             }
         }
         
@@ -41,19 +54,34 @@
             flex-direction: column;
             justify-content: center;
 
+            @include mobile{
+                padding-left: 0;
+                align-content: center;
+            }
+
             h1{
                 font-size: 60px;
                 margin: 10px 0;
                 color:rgb(19, 101, 112);
+
+                @include mobile{
+                    font-size: 40px;
+                }
             }
             h2{
                 font-size: 30px;
                 color:rgb(19, 101, 112);
+
+                @include mobile{
+                    font-size: 30px;
+                }
             }
             h3{
                 font-size: 35px;
                 margin-left: 90px;
                 color:rgb(19, 101, 112);
+
+               
             }
 
             h4{
@@ -62,12 +90,18 @@
                 margin-top: 10px;
                 color: rgb(22, 127, 141);
 
+                @include mobile{
+                    font-size: 20px;
+                }
+
                 span{
                     color: rgb(22, 127, 141);
+                    
                 }
 
                 .ityped-cursor{
                     animation: blinker 1s infinite;
+
                 }
 
                 @keyframes blinker {
@@ -86,12 +120,17 @@
         a{
             position: absolute;
             bottom: 10px;
+
             
             .icon{
                 font-size: 40px;
                 margin-left: 300px;
                 animation: timer 2s infinite;
                 color:rgb(19, 101, 112);
+
+                @include mobile{
+                    font-size: 30px;
+                }
             }
 
             @keyframes timer {
