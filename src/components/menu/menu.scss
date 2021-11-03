@@ -1,5 +1,7 @@
 @import '../../global.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 .menu{
     width: 300px;
     height: 100vh;
@@ -22,7 +24,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 200;
         color: #ffffff;
         width: 60%;
@@ -30,6 +32,7 @@
         li{
             margin-bottom: 20px;
             a{
+                font-family: 'Monoton', cursive;
                 color: inherit;
                 font-size: inherit;
                 text-decoration: none;

@@ -28,7 +28,7 @@ export default function Intro() {
             <div className='right'>
                 <div className="wrapper" >
                     <h2>Holla, I am</h2>
-                    <h1 > BENSON NYAGA</h1>
+                    <h1 > BeNsOn NyAga</h1>
                     <h3>Software Developer</h3>
                     <h4 className='typer'>Specialized in: <b><span ref={tickerTxt}></span></b></h4>
                 </div>

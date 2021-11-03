@@ -1,5 +1,9 @@
 @import '../../global.scss';
 
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Irish+Grover&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Monoton&display=swap');
+
 
 .intro{
     background-color: #ffff;
@@ -60,6 +64,7 @@
             }
 
             h1{
+                font-family: 'Irish Grover', cursive;
                 font-size: 60px;
                 margin: 10px 0;
                 color:rgb(19, 101, 112);
@@ -69,6 +74,7 @@
                 }
             }
             h2{
+                font-family: 'Gloria Hallelujah', cursive;
                 font-size: 30px;
                 color:rgb(19, 101, 112);
 
@@ -77,6 +83,7 @@
                 }
             }
             h3{
+                font-family: 'IM Fell English SC', serif;
                 font-size: 35px;
                 margin-left: 90px;
                 color:rgb(19, 101, 112);
@@ -85,6 +92,7 @@
             }
 
             h4{
+                font-family: 'Grechen Fuemen', cursive;
                 margin-left: 0px;
                 font-size: 30px;
                 margin-top: 10px;
@@ -95,6 +103,7 @@
                 }
 
                 span{
+                    font-family: 'Grechen Fuemen', cursive;
                     color: rgb(22, 127, 141);
                     
                 }

@@ -104,6 +104,7 @@
                     }
 
                     h2{
+                        color: $globalColor;
                         font-size: 25px;
 
                         @include mobile{

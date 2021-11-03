@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Fruktur&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100&display=swap");
 @import '../../global.scss';
 
+
 .navbar{
+    
     width: 100%;
     height: 60px;
     background-color:white;
@@ -10,6 +13,7 @@
     z-index: 3;
 
     .wrapper{
+       
         padding: 10px 20px;
         display: flex;
         align-items: center;
@@ -22,8 +26,9 @@
 
 
             .logo{
+                font-family: 'Fruktur', cursive;
                 font-size: 30px;
-                font-weight: 700;
+                font-weight: 300;
                 text-decoration: none;
                 color: inherit;
                 margin-right: 40px;
