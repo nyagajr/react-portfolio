@@ -6,21 +6,13 @@ import { useEffect, useRef } from'react'
 
 
 export default function Intro() {
-    const headerTxt = useRef()
-    useEffect(() => {
-        init(headerTxt.current, 
-            { showCursor: false, 
-                typeSpeed:  300,
-              backDelay:  90000,
-              strings: ['Benson Nyaga' ] })
-    }, [])
-
+   
     const tickerTxt = useRef()
     useEffect(() => {
         init(tickerTxt.current, 
             { showCursor: true, 
                 typeSpeed:  100,
-                startDelay: 5000,
+                startDelay: 1000,
               backDelay:  1000,
               strings: ['Web Development','Back-end Development', 'Front-end Development' ] })
     }, [])
@@ -36,7 +28,7 @@ export default function Intro() {
             <div className='right'>
                 <div className="wrapper" >
                     <h2>Holla, I am</h2>
-                    <h1 ref={headerTxt}></h1>
+                    <h1 > BENSON NYAGA</h1>
                     <h3>Software Developer</h3>
                     <h4 className='typer'>Specialized in: <b><span ref={tickerTxt}></span></b></h4>
                 </div>
