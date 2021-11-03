@@ -13,7 +13,7 @@ export default function Contact() {
     return (
         <div className='contact' id='contact'>
             <div className="left">
-            <img src={process.env.PUBLIC_URL + '/assets/hack.png'} />
+            <img src={process.env.PUBLIC_URL + '/assets/digitz.png'} />
             </div>
             <div className="right">
                 <h2>Contact</h2>
