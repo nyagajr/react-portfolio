@@ -67,6 +67,8 @@ export const featuredPortfolio = [
     },
 
   ];
+
+
   
   export const frontEndPortfolio = [
     {

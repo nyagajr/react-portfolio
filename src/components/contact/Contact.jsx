@@ -1,13 +1,24 @@
 import './contact.scss'
-import {useState} from 'react'
-import { SpaRounded } from '@material-ui/icons';
+import {useState, useRef} from 'react'
+import emailjs from 'emailjs-com';
 
-export default function Contact() {
-
+export const Contact = () => {
+    const formRef = useRef();
+    
     const [message, setMessage] = useState(false)
+   
     const handleSubmit = (e)=>{
         e.preventDefault();
         setMessage(true)
+        
+
+
+        emailjs.sendForm('service_cziqu2p', 'template_yj85jfn', formRef.current, 'user_jBQdfCqvbsI7nwkVi1TIl')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
     }
 
     return (
@@ -17,15 +28,18 @@ export default function Contact() {
             </div>
             <div className="right">
                 <h2>Contact</h2>
-                <form >
-                    <input type="text" placeholder='Email' />
-                    <textarea placeholder='Message'></textarea>
-                    <button type='submit' onClick={handleSubmit}>Send</button>
+                <form ref={formRef} onSubmit={handleSubmit} >
+                    <input type="text" placeholder='Name' name='user_name' />
+                    <input type="text" placeholder='Email' name='user_email' />
+                    <textarea placeholder='Message' name='message'></textarea>
+                    <button type='submit' >Send</button>
                     
-                    {message && <span>Thanks for your message</span>}
+                    {message && <span>Thanks for your message</span> }
                 </form>
             </div>
         </div>
     )
 }
+
+export default Contact;
 
