@@ -71,7 +71,7 @@ export default function Portfolio() {
                <div className="item">
               <img src={item.img} />
                    <h3>{item.title}</h3>
-                   <h3>{item.framework}</h3>
+                   <h4>{item.framework}</h4>
                    <a href={item.link}>Link</a>
 
                </div>
