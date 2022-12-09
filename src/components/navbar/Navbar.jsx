@@ -10,7 +10,7 @@ export default function Navbar({humOpen,setHumOpen}) {
                     <a href="#intro" className='logo'> Nyaga </a>
                     <div className="itemContainer">
                         <ContactPhone className='icon'/>
-                        <span>+254717106233</span>
+                        <span>+4915219386725</span>
                     </div>
 
                     <div className="itemContainer">
